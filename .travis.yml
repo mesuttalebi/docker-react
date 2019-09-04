@@ -10,6 +10,9 @@ before_install:
 script:
   - docker run -e CI=true mesutacerpro/docker-react npm run test
 
+env:
+  TRAVIS_SECURE_ENV_VARS: true
+  
 deploy:
   provider: elasticbeanstalk
   region: "eu-central-1"
