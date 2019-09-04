@@ -7,3 +7,5 @@ services:
 before_install:
   - docker build -t mesutacerpro/docker-react -f Dockerfile.dev .
   
+script:
+  - docker run -e CI=true mesutacerpro/docker-react npm run test 
